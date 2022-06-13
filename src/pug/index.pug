@@ -1,0 +1,134 @@
+extends common/layout
+
+block content
+
+  .container
+    .my-container
+      .my-container__title
+        | How Dreamshare works?
+      .my-container__steps
+        .my-container__images.d-flex
+          .my-container__img
+            img.my-container__img-1(src='images/step1.png', alt='')
+            .my-container__card
+              button.my-container__card_btn.my-container__card_textbtn
+                | STEP 1
+              p.my-container__card_textbold
+                | Sed leo enim, condimentum
+              p.my-container__card_textlight
+                | Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
+          .my-container__img
+            img.my-container__img-1(src='images/step2.png', alt='')
+            .my-container__card
+              button.my-container__card_textbtn.my-container__card_btn_2
+                | STEP 2
+              p.my-container__card_textbold.my-container__card_step2
+                | Morbi velit risus
+              p.my-container__card_textlight
+                | Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.
+          .my-container__img
+            img.my-container__img-1(src='images/step3.png', alt='')
+            .my-container__card
+              button.my-container__card_btn.my-container__card_textbtn
+                | STEP 3
+              p.my-container__card_textbold
+                | Sed leo enim, condimentum
+              p.my-container__card_textlight
+                | Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.
+  .container
+  .my-container
+    .my-container__title.my-container__partners_title
+      | Meet a partner for your best holiday
+    .my-container__partners
+      .my-container__partner.d-flex
+        .my-container__avatars
+          img.my-container__avatars_img(src='images/avatar3.png', alt='')
+          .my-container__avatars_icons.my-container__avatars_icons_color1
+            img.my-container__avatars_icon(src='images/music.png', alt='')
+        .my-container__partner_card
+          p.my-container__partner_card_textbold
+            | Bradley Hunter
+          p.my-container__partner_card_textlight
+            | Based in Chicago. I love playing tennis and loud music.
+      .my-container__partner.d-flex
+        .my-container__avatars
+          img.my-container__avatars_img(src='images/avatar1.png', alt='')
+          .my-container__avatars_icons.my-container__avatars_icons_color2
+            img.my-container__avatars_icon(src='images/brush.png', alt='')
+        .my-container__partner_card
+          p.my-container__partner_card_textbold
+            | Marie Bennett
+          p.my-container__partner_card_textlight
+            | Currently living in Colorado. Lover of art, languages and travelling.
+      .my-container__partner.d-flex
+        .my-container__avatars
+          img.my-container__avatars_img(src='images/avatar2.png', alt='')
+          .my-container__avatars_icons.my-container__avatars_icons_color3
+            img.my-container__avatars_icon(src='images/camera.png', alt='')
+        .my-container__partner_card
+          p.my-container__partner_card_textbold
+            | Diana Wells
+          p.my-container__partner_card_textlight
+            | Living in Athens, Greece. I love black and white classics, chillout music and green tea.
+      .my-container__partner.d-flex
+        .my-container__avatars
+          img.my-container__avatars_img(src='images/avatar4.png', alt='')
+          .my-container__avatars_icons.my-container__avatars_icons_color4
+            img.my-container__avatars_icon(src='images/airplane.png', alt='')
+        .my-container__partner_card
+          p.my-container__partner_card_textbold
+            | Christopher Pierce
+          p.my-container__partner_card_textlight
+            | Star Wars fanatic. I have a persistent enthusiasm to create new things.
+    .button__partner.d-flex-center
+      button.btn__partner.btn__partner_text
+        | See other partners
+  .container
+    .my-container
+      .my-container__title.my-container__ideas_title
+        | Discover holiday activity ideas
+      .my-container__ideas.d-flex
+        .my-container__idea
+          img.my-container__idea_img(src='images/idea1.png', alt='')
+          .my-container__idea_sport
+          .my-container__idea_text.my-container__idea_text_sport
+            | Sports and Activis
+        .my-container__idea
+          img.my-container__idea_img.my-container__idea_helth(src='images/idea2.png', alt='')
+          .my-container__idea_text.my-container__idea_text_helth
+            | Wellness and Health
+        .my-container__idea
+          img.my-container__idea_img(src='images/idea3.png', alt='')
+          .my-container__idea_extrim
+          .my-container__idea_text
+            | Extreme Sports 
+            br
+            |  and Expeditions
+        .my-container__idea
+          img.my-container__idea_img(src='images/idea4.png', alt='')
+          .my-container__idea_games
+          .my-container__idea_text
+            | Games
+        .my-container__idea2
+          img.my-container__idea_img2.my-container__idea_education(src='images/idea5.png', alt='')
+          .my-container__idea_text
+            | Culture and Education
+        .my-container__idea2
+          img.my-container__idea_img2.my-container__idea_relaction(src='images/idea6.png', alt='')
+          .my-container__idea_text
+            | Enjomet and Relaxation
+        .my-container__idea
+          img.my-container__idea_img.my-container__idea_travel(src='images/idea7.png', alt='')
+          .my-container__idea_text
+            | Trevelling
+  .container
+    .my-container
+      .my-container__title
+        | Crate your holiday activity
+      .my-container__interests
+        p.my-container__interests_text
+          | Hi! What are your holiday interests?
+        .my-container__interests_form
+          input.my-container__interests_input.my-container__interests_input_text(type='text', placeholder='Enter your insterests')
+          button.my-container__interests_btn Search partners
+              

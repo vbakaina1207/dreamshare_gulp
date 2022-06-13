@@ -1,0 +1,927 @@
+@import 'base/fonts';
+@import 'base/base';
+@import 'base/variables';
+@import 'base/mixin';
+
+
+
+.d-flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    @extend .d-flex-center;
+}
+
+.container-bg{
+    background: {
+        image: url('../images/bg_dreamshare.png');
+        position: center;
+        size:cover;
+        repeat: no-repeat;
+    }
+    width: 1440px;
+    height: 700px;
+}
+
+
+.d-flex-column{
+    display: flex;
+    flex-direction: column;
+
+}
+
+%font_normal {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: $color-text;
+}
+%font_montserrat_bold{
+    font-family: 'MontserratBold', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+%font_bold {
+    @extend %font_montserrat_bold;
+    color: $color-text;
+}
+%font_bold_title{
+    @extend %font_montserrat_bold;
+    color: $color-title;
+}
+
+%font_roboto{
+    font-family: 'RobotoLight', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+%font_light {
+    @extend %font_roboto;
+    color: $color-text;
+}
+
+%font_lighttext {
+    @extend %font_roboto;
+    color: $color-lighttext;
+}
+
+%font_light_card {
+    @extend %font_roboto;
+    color: $color-text-card-light;
+}
+
+%font_light_partner{
+    @extend %font_roboto;
+    color: $color_partner_text;
+}
+
+%font_light_interest{
+    @extend %font_roboto;
+    color: $color_interest_text;
+}
+
+%button_pink{
+        background: $btn-color;
+        border-radius: 40px;
+        border: none;
+}
+
+.header{
+    height: 36px;
+    margin: 40px 291px 0 248px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+&__login{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_text{
+        @extend %font_normal;
+        @include font-size(14px, 17px, 1px);
+    }
+    &_btn{
+        width: 90px;
+        height: 36px;
+        border: 2px solid #FFFFFF;
+        box-sizing: border-box;
+        border-radius: 40px;
+        background: transparent;
+        margin-left: 19px;
+    }
+}
+&__logo{
+    @extend %font_bold;
+    @include font-size(20px, 24px, 1px);
+}
+
+}
+
+.card {
+    width: 470px;
+    height: 253px;
+    margin: 147px auto 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__bold{
+        @extend %font_bold;
+        @include font-size (52px, 63px, 2px);  
+    }
+
+    &__light{
+        @extend %font_lighttext;
+        font-size: 24px;
+        line-height: 24px;
+        margin: 29px auto 33px;
+    }
+
+    &__btn{
+        @extend %font_bold;
+        @include font-size (14px, 17px, 0.8px);  
+        width: 225px;
+        height: 40px;
+        @extend %button_pink;
+        // outline: none;
+    }
+}
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.my-container{
+    width: 940px;
+    margin: 95px auto 0;
+
+    &__title{
+        @extend %font_bold_title;
+        @include font-size(26px, 20px, 1.1px);        
+        text-align: center;
+        height: 61px;
+    }
+
+    &__img {
+        width: 300px;
+        height: 400px;
+        position: relative;
+
+        &-1{
+            width: 300px;
+            height: 400px;
+        }
+    }
+
+    &__card{
+        position: absolute;
+        width: 250px;
+        height: 160px;
+        bottom: 21px;
+        left: 25px;
+
+        &_btn{
+            width: 70px;
+            height: 20px;
+            @extend %button_pink;
+        }     
+
+        &_btn_2{
+            @extend .my-container__card_btn;
+            margin-top: 30px;
+        }
+
+        &_textbold{
+            @extend %font_bold;
+            @include font-size(24px, 26px, 1.1px);     
+            margin-top: 20px;
+            margin-bottom: 26px;
+        }
+
+        &_step2{
+            margin-top: 25px;
+            margin-bottom: 17px;
+        }
+
+        &_textlight{
+            @extend %font_light_card;
+            font-size: 14px;
+            line-height: 14px;
+        }
+
+        &_textbtn{
+            @extend %font_normal;
+            @include font-size(10px, 12px, 2px);
+        }
+    }
+    &__partners{
+        height: 260px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__partner{
+        width: 221px;
+        height: 205px;
+        flex-direction: column;
+
+        &_card{
+
+            &_textbold{
+                @include font-size(14px, 17px, 1.1px);
+                text-align: center;
+                @extend %font_bold_title;
+                margin-top: 20px;
+                margin-bottom: 25px;
+            }
+
+            &_textlight{
+                @extend %font_light_card;
+                text-align: center;
+                @include font-size(14px, 14px, 1px);
+            }
+        }
+    }
+
+    &__avatars{
+        position: relative;
+        width: 120px;
+        height: 120px;
+
+        &_img{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #D8D8D8;
+            
+        }
+
+        &_icons{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 3px solid #FFFFFF;
+            @extend .d-flex-center;
+
+            &_color1{
+                background: $color-icon1;
+            }
+            &_color2{
+                background: $color-icon2;
+            }
+            &_color3{
+                background: $color-icon3;
+            }
+            &_color4{
+                background: $color-icon4;
+            }
+        }
+
+        &_icon{
+            width: 16px;
+            height: 16px;
+        }
+    }
+    
+    .btn__partner{
+        width: 180px;
+        height: 40px;
+        background: #FFFFFF;
+        border: 2px solid $btn-color;
+        box-sizing: border-box;
+        border-radius: 40px;
+
+        &_text{
+            @extend %font_bold;
+            @include font-size(14px, 17px, 0.8px);
+            color: $btn-color;
+        }
+    }
+    &__ideas{
+        height: 969px;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+
+    &__idea{
+        width: 300px;
+        height: 310px;
+        position: relative;
+
+        &_img{
+            width: 300px;
+            height: 310px;
+            
+        }
+
+        &_text{
+            @extend %font_bold;
+            font-size: 22px;
+            line-height: 27px;
+            text-align: center;
+            white-space: nowrap;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &__idea2{
+        width: 620px;
+        height: 310px;
+        position: relative;
+
+        &_img2{
+            width: 620px;
+            height: 310px;
+        }
+    }
+
+    &__interests{
+        text-align: center;
+
+        &_text{
+            @extend %font_light_interest;
+            font-size: 18px;
+            line-height: 14px;
+            text-align: center;
+            margin-bottom: 24px;
+            margin-top: 20px;
+        }
+
+        &_btn{
+            width: 172.12px;
+            height: 40px;
+            @extend %button_pink;
+            @extend %font_bold;
+            @include font-size(14px, 17px, 1px);
+            margin-left: 5px;
+        }
+
+        &_input{
+            width: 299px;
+            height: 40px;
+
+            &_text{
+                font-family: 'Roboto Light', sans-serif;
+                color: $color-placeholder;
+                font-size: 14px;
+                line-height: 16px;
+                margin-right: 1px;
+                
+            }
+        }
+    }
+}
+
+input::placeholder{
+    font-family: 'Roboto Light', sans-serif;
+                color: $color-placeholder;
+                font-size: 14px;
+                line-height: 16px;
+    padding-left: 10px;
+}
+.redline{
+    width: 1440px;
+    margin-top: 100px;
+    border: 3px solid $btn-color;
+    border-bottom-width: 0;
+}
+
+.footer{
+    width: 941px;
+    margin:30px auto 0;
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu{
+    width: 544px;
+    height: 224px;
+    align-items: start;
+
+    &__items{
+
+        &_text{
+            @extend %font_bold_title;
+            @include font-size(14px, 17px, 1px);            
+        }
+        &_redtext{
+            @extend %font_normal;
+            @include font-size(16px, 20px, 1px);            
+            color: $btn-color;
+        }        
+    }
+}
+
+.areto {
+
+    &__text{
+        @extend %font_bold;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: 1px;
+        color: $color-aretotext;
+        text-align: end;
+    }
+
+    &__img{
+        width: 110px;
+        height: 24px;
+        margin-top: 7px;
+    }
+}
+
+.menu__box{
+    margin-top: 11px;
+
+    &_item{
+
+    
+    &_link{
+        @extend %font_light_interest;
+        color: $color-placeholder;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 26px;
+    }
+}
+}
+
+
+@media screen and (max-width: 1470px) {
+
+    .container-bg{
+        width: 768px;
+        height: 700px;
+        background-size: cover;
+    }
+
+    .header{
+        margin: 40px 50px 0;
+    }
+
+    .my-container{
+        width: 748px;
+
+        &__img{
+            width: 236px;
+            height: 400px;
+            overflow: hidden;
+            margin-left: 7px;
+        }
+        &__img:first-child{
+            margin-left: 0;
+        }
+
+        &__title{
+            font-size: 22px;
+            line-height: 27px;
+        }
+
+        &__card {
+            width: 196px;
+            height: 179px;
+            bottom: 16px;
+            left: 20px;
+
+            &_textbold{
+                @include font-size(24px, 14px, 1px);
+                margin-top: 45px;
+                margin-bottom: 30px;
+            }
+
+            &_step2{
+                margin-top: 15px;
+                margin-bottom: 25px;
+            }
+
+            &_btn_2 {
+                margin-top: 50px;
+            }
+
+        }
+        &__partners{
+            width: 492px;
+            height: 464px;
+            flex-wrap: wrap;
+            display: flex;
+            flex-direction: column;;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+
+        &__partner {
+            width: 236px;
+            height: 205px;
+            margin-left: 18px; 
+            
+            &_card{
+
+                &_textbold{
+                    margin-top: 20px;
+                    margin-bottom: 22px;
+                }
+
+                &_textlight{
+                    letter-spacing: -0.3px;
+                }
+            }
+        }
+
+        &__partner:nth-of-type(1),
+        &__partner:nth-of-type(2){
+            margin-left: 0;
+        }
+
+        .button__partner{
+            margin-top: 42px;
+        }
+
+        &__ideas{
+            height: 970px;
+        }
+
+        &__idea{
+            width: 236px;
+            height: 310px;
+
+            &_img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &_travel{
+                object-position: left;
+            }
+            &_text_sport{
+                white-space: normal;   
+                top: 45%;             
+            }
+
+            &_text_helth{
+                white-space: normal;
+            }
+            &_img2{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            &_relaction{
+                object-position: left;
+            }
+        }
+        
+        &__idea2{
+            width: 492px;
+            height: 310px;
+        }
+        &__interests_text{
+            margin-bottom: 20px;
+        }
+        
+    }  
+    
+    .redline{
+        width: 748px;
+        margin-top: 98px;
+    }
+
+    .footer{
+        width: 689px;
+        margin: 32px auto 0;
+    }
+
+    .menu {
+        width: 462px;
+        
+
+        &__items_redtext{
+            line-height: 13px;
+            margin-right: 47px;
+        }
+    }
+} 
+
+
+@media screen and (max-width: 798px) {
+
+    .container-bg{
+        width: 320px;
+        height: 540px;
+        background-size: cover;
+    }
+
+    .header{
+
+        flex-wrap: wrap-reverse;
+        width: 153px;
+        margin: 31px auto;
+        height: 147px;
+
+        &__login_btn {
+            margin-left: 18px;
+        }
+
+        &__logo{
+            margin-top: 97px;
+        }
+    }
+
+    .card{
+        width: 280px;
+        height: 184px;
+        margin: -6px auto 0;
+        justify-content: space-between;
+    &__bold {
+        @include font-size(30px, 40px, 2px);
+        
+    }
+    &__light{
+        @include font-size(18px, 24px, 1px);
+        margin: 0 auto;
+    }
+
+    &__btn{
+        width: 280px;
+        height: 40px;
+    }
+
+}
+.my-container{
+    width: 300px;
+    margin: 35px auto 0;
+
+    &__title{
+        height: 41px;
+    }
+
+    &__images{
+        height: 740px;
+        flex-direction: column;
+        
+    }
+
+    &__img {
+        width: 300px;
+        height: 240px;
+        margin-left: 0;
+        
+        &-1{
+            width: 300px;
+            height: 240px;
+        }
+    }
+    &__card{
+        width: 250px;
+        height: 163px;
+        bottom: 16px;
+        left: 20px;
+
+        &_textbtn{
+            line-height:20px;
+        }
+
+        &_btn_2{
+            margin-top: 34px;
+        }
+
+        &_textbold{
+            @include font-size(24px, 14px, 1.1px);     
+            margin-top: 48px;
+            margin-bottom: 25px;
+        }
+        
+        &_step2{
+            margin-top: 30px;
+            margin-bottom: 23px;
+        }
+
+        
+    }
+
+    &__partners{
+        height: 883px;
+        width: 236px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+
+        &_title{
+            height: 72px;
+        }
+    }
+
+    &__partner{
+        width: 236px;        
+        flex-direction: column;
+        order: 0;
+        margin-left: 0;
+
+        &_card{
+
+            &_textbold{
+                margin-top: 20px;
+                margin-bottom: 25px;
+            }
+        }
+    }
+    &__partner:nth-of-type(1){
+        order:1;
+    
+    }
+    &__partner:nth-of-type(4){
+        order:-1;
+    }
+
+    .button__partner {
+        margin-top: 37px;
+    }
+    
+    .btn__partner{
+        width: 280px;
+        height: 40px;
+    }
+    
+    &__idea{
+        width: 300px;
+        height: 207px;
+    }
+
+    &__ideas{
+        height: 900px;
+
+    &_title{
+        height: 87px;
+        width: 280px;
+        margin: 0 auto;
+    }
+    }
+
+    &__idea{
+        width: 300px;
+        height: 120px;
+
+        &_img{
+            width: 0;
+            height: 0;
+            display: block;
+        }
+
+        &_travel{
+            width: 300px;
+            height: 120px;
+            object-fit: cover;            
+            object-position: 10px -21px;
+        }
+
+        &_img2{
+            width: 300px;
+            height: 120px;
+        }
+        &_relaction{
+            width: 300px;
+            height: 120px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &_education{
+            width: 300px;
+            height: 120px;
+            object-fit: cover;
+            object-position: center;
+        }
+        &_games{
+            width: 300px;
+            height: 120px;
+            background-image: url('../images/games.png');
+            background-size: cover;
+        }
+        &_extrim{
+            width: 300px;
+            height: 120px;
+            background-image: url('../images/extreme.png');
+            background-size: cover;            
+        }
+        &_helth{
+            width: 300px;
+            height: 120px;
+            object-fit: cover;
+            object-position: right;
+        }
+        &_sport{
+            width: 100%;
+            height: 120px;
+            background-image: url('../images/Sport.png');
+            background-size: cover;
+        }
+    }
+
+
+    &__idea2{
+        width: 300px;
+        height: 120px;
+        position: relative;
+
+    }
+
+    &__interests{
+
+        &_input{
+        width: 280px;
+        height: 40px;
+        background: #FFFFFF;
+        border: 1px solid #D4D4D4;
+        box-sizing: border-box;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.073313);
+        border-radius: 3px;
+    }
+
+    &_text{
+        margin-top: 30px;
+    }
+
+    &_btn{
+        width: 280px;
+        height: 40px;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+}
+
+
+}
+.redline{
+    width: 320px;
+    margin-top: 38px;
+}
+
+.footer{
+    width: 320px;
+    height: 226px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+
+}
+.menu{
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    height: 139px;
+
+    &__box{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 206px;
+        margin: 0;
+    }
+
+    &__items{
+        margin-top: 0;
+    
+    &_text {
+        text-align: center;
+    }
+
+    &_redtext{
+        margin: -13px auto 13px;
+        line-height: 20px;
+        
+    }
+    &_partners{
+        margin-top: 4px;
+    }
+    }
+    
+}
+
+.areto{
+    margin-bottom: 22px;
+
+    &__text{
+        text-align: center;
+    }
+}
+
+
+}
